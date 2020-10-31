@@ -1,0 +1,137 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- font links --> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lobster&family=Montserrat:wght@600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- css links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title>plug-in-hw</title>
+     <script src="https://kit.fontawesome.com/18f43d5057.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-primary"> Click the button to show the course.</h1>
+              <button type="button" onclick="textChange()" class="btn btn-danger btn-block btn-lg"> Click me </button>
+              
+              <h2> Online classes </h2>
+               
+               <div class="row"> 
+                <div class="col-12">
+                  <h2>My First JavaScript</h2>
+
+        <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()"class="btn-important btn-lg" >
+     Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+                 </div>
+                 
+               </div> 
+
+                <div class="parent">
+                    <p>Click to change color:</p>
+                    <div class="child">DIV1</div>
+                    <div class="child">DIV2</div>
+                    <div class="child">DIV3</div>
+                    <div class="child">DIV4</div>
+                    <div class="child">DIV5</div>
+                </div>
+            </div>
+        </div> 
+        <div class="row"> 
+          <div class="col-md-4">
+            
+          </div>
+          
+        </div> 
+         <div class="col-6">
+                <div class="parent">
+                    <p>Click to change color:</p>
+                    <button type="button" onclick="bodyColor()" class="btn btn-block btn-danger">change body color</button>
+                </div>
+            </div>
+  <div>     
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</div>
+   <div> 
+    <div id="demo2">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo2").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+   </div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+</script>
+<!--plugin-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="jquery.counterup.min.js"></script>
+
+ <!--plugin-->
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+
+</script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+
+</script>
+ <script src="jq/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</body>
+
+</html>
